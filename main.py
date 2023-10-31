@@ -27,9 +27,9 @@ cap = cv2.VideoCapture(0)
 #for resolution
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1024)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 768)
-face_cascade = cv2.CascadeClassifier('Pictures/cascade_zoomedIn.xml')
+#face_cascade = cv2.CascadeClassifier('Pictures/cascade_zoomedIn.xml')
 #face_cascade = cv2.CascadeClassifier('Pictures/haarcascade_frontalface_default.xml')
-#face_cascade = cv2.CascadeClassifier('Pictures/classifier/cascade.xml')
+face_cascade = cv2.CascadeClassifier('Pictures/classifier/cascade.xml')
 
 #Creating a loop to capture each frame of the video in the name of Img
 while True:
