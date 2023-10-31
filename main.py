@@ -1,13 +1,15 @@
 import cv2
-#code for pictures
-'''
-img = cv2.imread('Pictures/Test/Clutter.jpg')# Reading the image
-gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)# Converting image to grayscaleq
+
+# code for pictures
+# '''
+img = cv2.imread('Pictures/folder/Test/Test3.jpg')  # Reading the image
+gray_img = cv2.cvtColor(img, cv2.COLOR_BGR2GRAY)  # Converting image to grayscaleq
 
 # Loading the required haar-cascade xml classifier file
-#haar_cascade = cv2.CascadeClassifier('Pictures/classifier/cascade.xml')
-#haar_cascade = cv2.CascadeClassifier('Pictures/cascade_zoomedIn.xml')
-haar_cascade = cv2.CascadeClassifier('Pictures/haarcascade_frontalface_default.xml')
+# haar_cascade = cv2.CascadeClassifier('Pictures/haarcascade_frontalface_default.xml')
+haar_cascade = cv2.CascadeClassifier('Pictures/cascade_zoomedIn.xml')
+haar_cascade = cv2.CascadeClassifier('Pictures/Cascade_Zoomed_And_Our_Faces.xml')
+haar_cascades = cv2.CascadeClassifier('Pictures/classifier/cascade.xml')
 
 # Applying the face detection method on the grayscale image
 faces_rect = haar_cascade.detectMultiScale(gray_img, 1.1, 9)
@@ -27,9 +29,12 @@ cap = cv2.VideoCapture(0)
 #for resolution
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1024)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 768)
+
+
 #face_cascade = cv2.CascadeClassifier('Pictures/cascade_zoomedIn.xml')
+face_cascade = cv2.CascadeClassifier('Pictures/Cascade_Zoomed_And_Our_Faces.xml')
 #face_cascade = cv2.CascadeClassifier('Pictures/haarcascade_frontalface_default.xml')
-face_cascade = cv2.CascadeClassifier('Pictures/classifier/cascade.xml')
+#face_cascade = cv2.CascadeClassifier('Pictures/classifier/cascade.xml')
 
 #Creating a loop to capture each frame of the video in the name of Img
 while True:
@@ -53,4 +58,4 @@ while True:
     if k == 81 or k == 113:#Press q to close the program
         break
 
-#'''
+'''
